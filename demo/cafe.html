@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cafe Lumière（デモサイト）| Web Craft Studio 制作実績</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          cream: { 50:'#fbf7f0', 100:'#f5ead9' },
+          brown: { 500:'#8a5a3a', 600:'#6f4529', 700:'#54331d', 800:'#3a2214', 900:'#241408' },
+          amber: { 400:'#e8b26f', 500:'#d99a4e' }
+        },
+      }
+    }
+  }
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Zen+Kaku+Gothic+New:wght@500;700;900&display=swap" rel="stylesheet">
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Noto Sans JP', sans-serif; }
+  .font-heading { font-family: 'Zen Kaku Gothic New', 'Noto Sans JP', sans-serif; }
+  .amber-gradient { background: linear-gradient(135deg, #e8b26f 0%, #d99a4e 50%, #b97f38 100%); }
+  .hero-bg { background: radial-gradient(ellipse at top right, rgba(217,154,78,0.2), transparent 50%), linear-gradient(135deg, #241408 0%, #3a2214 40%, #54331d 100%); }
+</style>
+</head>
+<body class="bg-cream-50 text-brown-800 antialiased">
+
+<!-- デモ告知バナー -->
+<div class="bg-amber-500 text-brown-900 text-xs md:text-sm font-bold text-center py-2 px-4">
+  <i class="fa-solid fa-circle-info mr-1"></i>
+  これは Web Craft Studio の制作イメージを示す<span class="underline">デモサイト</span>です。
+  <a href="../index.html#works" class="underline hover:opacity-70 ml-1">← 制作実績一覧に戻る</a>
+</div>
+
+<!-- ヘッダー -->
+<header class="sticky top-0 bg-cream-50/95 backdrop-blur-sm z-40 border-b border-brown-100 shadow-sm">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+    <a href="#top" class="font-heading font-black text-lg text-brown-800">Cafe <span class="text-amber-600">Lumière</span></a>
+    <nav class="hidden md:flex items-center gap-6 text-sm font-heading font-medium text-brown-600">
+      <a href="#about" class="hover:text-amber-600">お店について</a>
+      <a href="#menu" class="hover:text-amber-600">メニュー</a>
+      <a href="#access" class="hover:text-amber-600">アクセス</a>
+    </nav>
+    <a href="tel:0398765432" class="inline-flex items-center gap-2 bg-brown-700 text-white text-sm font-bold px-4 py-2 rounded-full">
+      <i class="fa-solid fa-phone"></i><span class="hidden sm:inline">03-9876-5432</span>
+    </a>
+  </div>
+</header>
+
+<!-- ヒーロー -->
+<section id="top" class="hero-bg py-20 md:py-28 px-4 text-center relative overflow-hidden">
+  <div class="relative max-w-3xl mx-auto">
+    <span class="inline-block text-amber-400 text-xs font-bold tracking-widest mb-3">CAFE & BAKE</span>
+    <h1 class="font-heading font-black text-3xl md:text-5xl text-white leading-tight">こだわりの自家焙煎コーヒーと<br class="hidden sm:block">焼きたて菓子のひととき</h1>
+    <p class="mt-6 text-amber-100/90 text-sm md:text-base leading-relaxed">窓辺の落ち着いた空間で、ゆったりとした時間をお過ごしください。</p>
+    <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+      <a href="tel:0398765432" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 amber-gradient text-brown-900 font-bold px-7 py-3.5 rounded-full shadow-lg">
+        <i class="fa-solid fa-phone"></i> 電話で問い合わせる
+      </a>
+      <a href="#" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#06C755] text-white font-bold px-7 py-3.5 rounded-full">
+        <i class="fa-brands fa-line"></i> LINEで相談する
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- お店について -->
+<section id="about" class="py-16 md:py-24 px-4 bg-cream-100">
+  <div class="max-w-4xl mx-auto grid md:grid-cols-3 gap-6 text-center">
+    <div class="bg-white rounded-2xl p-8 shadow-sm border border-brown-100">
+      <i class="fa-solid fa-mug-hot text-amber-600 text-2xl mb-3"></i>
+      <h3 class="font-heading font-bold text-brown-800">自家焙煎コーヒー</h3>
+      <p class="mt-2 text-sm text-brown-500 leading-relaxed">豆にこだわり、店内で毎日焙煎しています。</p>
+    </div>
+    <div class="bg-white rounded-2xl p-8 shadow-sm border border-brown-100">
+      <i class="fa-solid fa-cookie text-amber-600 text-2xl mb-3"></i>
+      <h3 class="font-heading font-bold text-brown-800">焼きたて菓子</h3>
+      <p class="mt-2 text-sm text-brown-500 leading-relaxed">毎朝仕込むスコーンや焼き菓子が人気です。</p>
+    </div>
+    <div class="bg-white rounded-2xl p-8 shadow-sm border border-brown-100">
+      <i class="fa-solid fa-wifi text-amber-600 text-2xl mb-3"></i>
+      <h3 class="font-heading font-bold text-brown-800">Wi-Fi・電源完備</h3>
+      <p class="mt-2 text-sm text-brown-500 leading-relaxed">お仕事や読書にもゆっくりご利用いただけます。</p>
+    </div>
+  </div>
+</section>
+
+<!-- メニュー -->
+<section id="menu" class="py-16 md:py-24 px-4">
+  <div class="max-w-3xl mx-auto">
+    <div class="text-center mb-12">
+      <span class="text-amber-600 font-bold text-xs tracking-widest">MENU</span>
+      <h2 class="font-heading font-black text-2xl md:text-3xl text-brown-800 mt-2">メニュー</h2>
+    </div>
+    <div class="space-y-4">
+      <div class="flex justify-between items-center border-b border-brown-100 pb-4">
+        <div><p class="font-heading font-bold text-brown-800">本日のブレンド</p><p class="text-xs text-brown-400 mt-1">深煎り・浅煎りからお選びいただけます</p></div>
+        <p class="font-heading font-bold text-amber-600">¥550</p>
+      </div>
+      <div class="flex justify-between items-center border-b border-brown-100 pb-4">
+        <div><p class="font-heading font-bold text-brown-800">カフェラテ</p><p class="text-xs text-brown-400 mt-1">ホット／アイス</p></div>
+        <p class="font-heading font-bold text-amber-600">¥600</p>
+      </div>
+      <div class="flex justify-between items-center border-b border-brown-100 pb-4">
+        <div><p class="font-heading font-bold text-brown-800">自家製スコーン</p><p class="text-xs text-brown-400 mt-1">プレーン／季節のフレーバー</p></div>
+        <p class="font-heading font-bold text-amber-600">¥380</p>
+      </div>
+      <div class="flex justify-between items-center pb-4">
+        <div><p class="font-heading font-bold text-brown-800">ランチプレート</p><p class="text-xs text-brown-400 mt-1">数量限定・平日11:30〜</p></div>
+        <p class="font-heading font-bold text-amber-600">¥1,200</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- アクセス -->
+<section id="access" class="py-16 md:py-24 px-4 bg-brown-800">
+  <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 items-center">
+    <div class="text-white">
+      <span class="text-amber-400 font-bold text-xs tracking-widest">ACCESS</span>
+      <h2 class="font-heading font-black text-2xl md:text-3xl mt-2">アクセス・営業時間</h2>
+      <ul class="mt-6 space-y-3 text-sm text-amber-100/80">
+        <li class="flex gap-3"><i class="fa-solid fa-location-dot text-amber-400 mt-1"></i>東京都目黒区〇〇 4-5-6 1F</li>
+        <li class="flex gap-3"><i class="fa-solid fa-train text-amber-400 mt-1"></i>〇〇駅より徒歩3分</li>
+        <li class="flex gap-3"><i class="fa-solid fa-clock text-amber-400 mt-1"></i>8:00-18:00（水曜定休）</li>
+        <li class="flex gap-3"><i class="fa-solid fa-phone text-amber-400 mt-1"></i>03-9876-5432</li>
+      </ul>
+      <a href="tel:0398765432" class="mt-8 inline-flex items-center gap-2 amber-gradient text-brown-900 font-bold px-6 py-3 rounded-full">
+        <i class="fa-solid fa-phone"></i> 今すぐ電話する
+      </a>
+    </div>
+    <div class="rounded-2xl overflow-hidden shadow-lg h-64 md:h-80">
+      <iframe class="w-full h-full border-0" loading="lazy" src="https://www.google.com/maps?q=目黒駅&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-brown-900 text-amber-100/60 text-center text-xs py-8 px-4">
+  <p>© 2026 Cafe Lumière（デモサイト）— Produced by <a href="../index.html" class="text-amber-400 hover:underline">Web Craft Studio</a></p>
+</footer>
+
+</body>
+</html>

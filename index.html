@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Web Craft Studio | 飲食店の集客力を高めるWeb制作</title>
+<meta name="description" content="飲食店の集客力を高める、高品質・高コスパなWeb制作。初期費用を抑え、最短1週間で公開可能。無料相談・見積もり受付中。">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          navy: {
+            50: '#eef1f6',
+            100: '#d3dae7',
+            200: '#a7b6cf',
+            300: '#7b91b7',
+            400: '#4f6d9f',
+            500: '#2e4d7d',
+            600: '#1c3862',
+            700: '#13294a',
+            800: '#0c1c35',
+            900: '#081527',
+          },
+          gold: {
+            400: '#e8c977',
+            500: '#d4af37',
+            600: '#b8942c',
+          }
+        },
+        fontFamily: {
+          sans: ['"Noto Sans JP"', '"Hiragino Sans"', 'sans-serif'],
+        }
+      }
+    }
+  }
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Zen+Kaku+Gothic+New:wght@500;700;900&display=swap" rel="stylesheet">
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Noto Sans JP', sans-serif; }
+  .font-heading { font-family: 'Zen Kaku Gothic New', 'Noto Sans JP', sans-serif; }
+  .gold-gradient {
+    background: linear-gradient(135deg, #e8c977 0%, #d4af37 50%, #b8942c 100%);
+  }
+  .hero-bg {
+    background: radial-gradient(ellipse at top right, rgba(212,175,55,0.15), transparent 50%),
+                linear-gradient(135deg, #081527 0%, #0c1c35 40%, #13294a 100%);
+  }
+  .section-fade-in {
+    animation: fadeInUp 0.8s ease-out both;
+  }
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .card-hover:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px -12px rgba(12,28,53,0.25);
+  }
+</style>
+</head>
+<body class="bg-white text-navy-800 antialiased">
+
+<!-- ヘッダー -->
+<header class="fixed top-0 left-0 w-full bg-white/95 backdrop-blur-sm z-50 border-b border-navy-100 shadow-sm">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16 md:h-20">
+      <a href="#top" class="flex items-center gap-2">
+        <span class="font-heading font-black text-lg md:text-xl text-navy-800 tracking-tight">Web Craft Studio</span>
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-8 font-heading font-medium text-sm text-navy-600">
+        <a href="#reasons" class="hover:text-gold-600 transition-colors">選ばれる理由</a>
+        <a href="#pricing" class="hover:text-gold-600 transition-colors">サービス・料金</a>
+        <a href="#flow" class="hover:text-gold-600 transition-colors">制作の流れ</a>
+        <a href="#contact" class="hover:text-gold-600 transition-colors">お問い合わせ</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="#contact" class="hidden sm:inline-flex items-center gap-2 bg-navy-800 hover:bg-navy-700 text-white font-heading font-bold text-sm px-5 py-2.5 rounded-full transition-colors shadow">
+          <i class="fa-solid fa-comment-dots"></i>
+          無料相談・見積もり
+        </a>
+        <button id="menuBtn" class="lg:hidden w-10 h-10 flex items-center justify-center text-navy-800 text-xl">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- モバイルメニュー -->
+  <div id="mobileMenu" class="hidden lg:hidden bg-white border-t border-navy-100 px-4 py-4 space-y-1">
+    <a href="#reasons" class="block py-3 px-2 font-heading font-medium text-navy-700 border-b border-navy-50">選ばれる理由</a>
+    <a href="#pricing" class="block py-3 px-2 font-heading font-medium text-navy-700 border-b border-navy-50">サービス・料金</a>
+    <a href="#flow" class="block py-3 px-2 font-heading font-medium text-navy-700 border-b border-navy-50">制作の流れ</a>
+    <a href="#contact" class="block py-3 px-2 font-heading font-medium text-navy-700">お問い合わせ</a>
+    <a href="#contact" class="mt-2 flex items-center justify-center gap-2 bg-navy-800 text-white font-heading font-bold text-sm px-5 py-3 rounded-full">
+      <i class="fa-solid fa-comment-dots"></i> 無料相談・見積もり
+    </a>
+  </div>
+</header>
+
+<!-- ヒーローセクション -->
+<section id="top" class="hero-bg pt-32 pb-24 md:pt-44 md:pb-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+  <div class="absolute inset-0 opacity-[0.04]" style="background-image: radial-gradient(circle, #ffffff 1px, transparent 1px); background-size: 24px 24px;"></div>
+  <div class="max-w-5xl mx-auto text-center relative">
+    <span class="inline-flex items-center gap-2 bg-white/10 border border-gold-400/30 text-gold-400 text-xs md:text-sm font-heading font-bold px-4 py-2 rounded-full mb-6">
+      <i class="fa-solid fa-store"></i> 飲食店オーナー様専用 Web制作サービス
+    </span>
+    <h1 class="font-heading font-black text-3xl sm:text-4xl md:text-6xl text-white leading-tight md:leading-tight tracking-tight">
+      飲食店の集客力を高める、<br class="hidden sm:block">
+      <span class="text-gold-400">高品質・高コスパ</span>なWeb制作
+    </h1>
+    <p class="mt-6 md:mt-8 text-navy-100 text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
+      初期費用を抑え、お電話や既存の予約サイト（食べログ等）へのスムーズな導線を構築。<br class="hidden md:block">
+      最短<span class="text-gold-400 font-bold">1週間</span>で公開可能。
+    </p>
+    <div class="mt-10 flex items-center justify-center">
+      <a href="#contact" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 gold-gradient text-navy-800 font-heading font-bold text-base px-8 py-4 rounded-full shadow-lg shadow-gold-500/20 hover:brightness-105 transition-all">
+        <i class="fa-solid fa-paper-plane"></i> フォームで相談する
+      </a>
+    </div>
+
+    <div class="mt-14 grid grid-cols-3 gap-4 md:gap-8 max-w-2xl mx-auto text-white">
+      <div>
+        <p class="font-heading font-black text-2xl md:text-4xl text-gold-400">1週間〜</p>
+        <p class="text-xs md:text-sm text-navy-200 mt-1">最短公開スピード</p>
+      </div>
+      <div>
+        <p class="font-heading font-black text-2xl md:text-4xl text-gold-400">5万円〜</p>
+        <p class="text-xs md:text-sm text-navy-200 mt-1">明快な初期費用</p>
+      </div>
+      <div>
+        <p class="font-heading font-black text-2xl md:text-4xl text-gold-400">月額4,980円</p>
+        <p class="text-xs md:text-sm text-navy-200 mt-1">安心の保守サポート</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- お悩みセクション -->
+<section class="py-20 md:py-28 px-4 sm:px-6 lg:px-8 bg-navy-50/50">
+  <div class="max-w-5xl mx-auto">
+    <div class="text-center mb-14">
+      <span class="text-gold-600 font-heading font-bold text-sm tracking-widest">FOR RESTAURANT OWNERS</span>
+      <h2 class="font-heading font-black text-2xl md:text-4xl text-navy-800 mt-3">こんなお悩みはありませんか？</h2>
+    </div>
+    <div class="grid md:grid-cols-2 gap-6 md:gap-8">
+      <div class="bg-white rounded-2xl p-8 shadow-sm border border-navy-100 flex gap-5 card-hover">
+        <div class="shrink-0 w-12 h-12 rounded-xl bg-navy-800 flex items-center justify-center">
+          <i class="fa-brands fa-instagram text-gold-400 text-xl"></i>
+        </div>
+        <div>
+          <h3 class="font-heading font-bold text-lg text-navy-800">SNSだけでは伝わりにくい</h3>
+          <p class="mt-2 text-navy-500 text-sm leading-relaxed">SNSだけではメニューや営業時間が伝わりにくい…お客様が知りたい情報にすぐたどり着けず、機会損失につながっているかもしれません。</p>
+        </div>
+      </div>
+      <div class="bg-white rounded-2xl p-8 shadow-sm border border-navy-100 flex gap-5 card-hover">
+        <div class="shrink-0 w-12 h-12 rounded-xl bg-navy-800 flex items-center justify-center">
+          <i class="fa-solid fa-triangle-exclamation text-gold-400 text-xl"></i>
+        </div>
+        <div>
+          <h3 class="font-heading font-bold text-lg text-navy-800">依頼先も費用感も分からない</h3>
+          <p class="mt-2 text-navy-500 text-sm leading-relaxed">HPを作りたいが、どこに頼めばいいか分からない・高額すぎる…そんな不安から、ホームページ制作を後回しにしていませんか？</p>
+        </div>
+      </div>
+    </div>
+    <p class="text-center mt-12 text-navy-700 font-heading font-bold text-lg md:text-xl">
+      そのお悩み、<span class="text-gold-600">Web Craft Studio</span>が解決します。
+    </p>
+  </div>
+</section>
+
+<!-- 選ばれる理由 -->
+<section id="reasons" class="py-20 md:py-28 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-16">
+      <span class="text-gold-600 font-heading font-bold text-sm tracking-widest">3 REASONS</span>
+      <h2 class="font-heading font-black text-2xl md:text-4xl text-navy-800 mt-3">当サービスが選ばれる3つの理由</h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="relative bg-white rounded-2xl p-8 border border-navy-100 shadow-sm card-hover">
+        <span class="font-heading font-black text-5xl text-transparent bg-clip-text gold-gradient">01</span>
+        <h3 class="font-heading font-bold text-lg text-navy-800 leading-snug mt-4">既存の予約導線をそのまま活用</h3>
+        <p class="mt-3 text-navy-500 text-sm leading-relaxed">お電話・食べログ等の予約URL・LINEなど、今お使いの予約管理をそのまま活かせる導線設計。新しい予約システムへの切り替えは不要です。</p>
+      </div>
+      <div class="relative bg-white rounded-2xl p-8 border border-navy-100 shadow-sm card-hover">
+        <span class="font-heading font-black text-5xl text-transparent bg-clip-text gold-gradient">02</span>
+        <h3 class="font-heading font-bold text-lg text-navy-800 leading-snug mt-4">分かりやすい定額・低価格プラン</h3>
+        <p class="mt-3 text-navy-500 text-sm leading-relaxed">不要な追加料金なしの明朗会計。予算が読みやすいので、初めてのホームページ制作でも安心してご依頼いただけます。</p>
+      </div>
+      <div class="relative bg-white rounded-2xl p-8 border border-navy-100 shadow-sm card-hover">
+        <span class="font-heading font-black text-5xl text-transparent bg-clip-text gold-gradient">03</span>
+        <h3 class="font-heading font-bold text-lg text-navy-800 leading-snug mt-4">スマホ最適化＆更新サポート</h3>
+        <p class="mt-3 text-navy-500 text-sm leading-relaxed">来店客の多くが利用するスマホ表示を最適化。納品後もメニューや営業時間の更新をサポートするので運用も安心です。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- サービス・料金プラン -->
+<section id="pricing" class="py-20 md:py-28 px-4 sm:px-6 lg:px-8 bg-navy-800 relative overflow-hidden">
+  <div class="absolute inset-0 opacity-[0.05]" style="background-image: radial-gradient(circle, #ffffff 1px, transparent 1px); background-size: 24px 24px;"></div>
+  <div class="max-w-6xl mx-auto relative">
+    <div class="text-center mb-16">
+      <span class="text-gold-400 font-heading font-bold text-sm tracking-widest">PRICING</span>
+      <h2 class="font-heading font-black text-2xl md:text-4xl text-white mt-3">サービス・料金プラン</h2>
+      <p class="text-navy-200 mt-4 text-sm md:text-base">シンプルで分かりやすい料金体系。追加料金の心配はありません。</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+      <!-- 制作プラン -->
+      <div class="bg-white rounded-2xl overflow-hidden shadow-2xl">
+        <div class="p-8 border-b border-navy-100">
+          <span class="inline-block bg-navy-100 text-navy-700 text-xs font-heading font-bold px-3 py-1 rounded-full mb-3">初期制作</span>
+          <h3 class="font-heading font-black text-xl text-navy-800">シンプル制作プラン</h3>
+          <p class="mt-4 flex items-baseline gap-1">
+            <span class="font-heading font-black text-4xl text-navy-800">50,000</span>
+            <span class="text-navy-500 text-sm">円（税込・初期費用）</span>
+          </p>
+        </div>
+        <ul class="p-8 space-y-4 text-sm text-navy-600">
+          <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-gold-600 mt-0.5"></i>トップページ＋メニューページ作成</li>
+          <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-gold-600 mt-0.5"></i>スマホ最適化</li>
+          <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-gold-600 mt-0.5"></i>電話・外部予約サイト（食べログ等）連携</li>
+          <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-gold-600 mt-0.5"></i>Googleマップ埋め込み</li>
+        </ul>
+      </div>
+
+      <!-- 保守プラン -->
+      <div class="bg-navy-50 rounded-2xl overflow-hidden shadow-2xl border-2 border-gold-500 relative">
+        <span class="absolute top-0 right-0 gold-gradient text-navy-800 text-xs font-heading font-bold px-4 py-1.5 rounded-bl-xl">おすすめ</span>
+        <div class="p-8 border-b border-navy-100">
+          <span class="inline-block bg-gold-500/20 text-gold-600 text-xs font-heading font-bold px-3 py-1 rounded-full mb-3">継続サポート</span>
+          <h3 class="font-heading font-black text-xl text-navy-800">月額保守サポート</h3>
+          <p class="mt-4 flex items-baseline gap-1">
+            <span class="font-heading font-black text-4xl text-navy-800">4,980</span>
+            <span class="text-navy-500 text-sm">円（税込・月額）</span>
+          </p>
+        </div>
+        <ul class="p-8 space-y-4 text-sm text-navy-600">
+          <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-gold-600 mt-0.5"></i>メニュー・営業時間変更などの月1回更新代行</li>
+          <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-gold-600 mt-0.5"></i>サーバー維持・セキュリティ管理</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 制作の流れ -->
+<section id="flow" class="py-20 md:py-28 px-4 sm:px-6 lg:px-8 bg-navy-50/50">
+  <div class="max-w-5xl mx-auto">
+    <div class="text-center mb-16">
+      <span class="text-gold-600 font-heading font-bold text-sm tracking-widest">FLOW</span>
+      <h2 class="font-heading font-black text-2xl md:text-4xl text-navy-800 mt-3">ご納品までのステップ</h2>
+    </div>
+    <div class="grid md:grid-cols-4 gap-6 md:gap-4 relative">
+      <div class="hidden md:block absolute top-8 left-[12.5%] right-[12.5%] h-0.5 bg-navy-200"></div>
+
+      <div class="relative text-center">
+        <div class="w-16 h-16 mx-auto rounded-full bg-navy-800 text-gold-400 flex items-center justify-center font-heading font-black text-xl relative z-10 shadow-lg">1</div>
+        <i class="fa-solid fa-comments text-navy-400 text-2xl mt-4 mb-3 block"></i>
+        <h3 class="font-heading font-bold text-navy-800">無料相談・ヒアリング</h3>
+        <p class="mt-2 text-sm text-navy-500 leading-relaxed">現在の予約方法やご要望を確認いたします。</p>
+      </div>
+      <div class="relative text-center">
+        <div class="w-16 h-16 mx-auto rounded-full bg-navy-800 text-gold-400 flex items-center justify-center font-heading font-black text-xl relative z-10 shadow-lg">2</div>
+        <i class="fa-solid fa-file-invoice-dollar text-navy-400 text-2xl mt-4 mb-3 block"></i>
+        <h3 class="font-heading font-bold text-navy-800">デモ確認・お見積り</h3>
+        <p class="mt-2 text-sm text-navy-500 leading-relaxed">デモサイトのご確認と正式なお見積りをご提示。</p>
+      </div>
+      <div class="relative text-center">
+        <div class="w-16 h-16 mx-auto rounded-full bg-navy-800 text-gold-400 flex items-center justify-center font-heading font-black text-xl relative z-10 shadow-lg">3</div>
+        <i class="fa-solid fa-pen-ruler text-navy-400 text-2xl mt-4 mb-3 block"></i>
+        <h3 class="font-heading font-bold text-navy-800">制作・修正対応</h3>
+        <p class="mt-2 text-sm text-navy-500 leading-relaxed">デザイン制作を進め、修正のご要望に対応します。</p>
+      </div>
+      <div class="relative text-center">
+        <div class="w-16 h-16 mx-auto rounded-full gold-gradient text-navy-800 flex items-center justify-center font-heading font-black text-xl relative z-10 shadow-lg">4</div>
+        <i class="fa-solid fa-rocket text-navy-400 text-2xl mt-4 mb-3 block"></i>
+        <h3 class="font-heading font-bold text-navy-800">公開・運用サポート開始</h3>
+        <p class="mt-2 text-sm text-navy-500 leading-relaxed">サイト公開後も月額サポートで安心運用。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- お問い合わせフォーム -->
+<section id="contact" class="py-20 md:py-28 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-4xl mx-auto">
+    <div class="text-center mb-14">
+      <span class="text-gold-600 font-heading font-bold text-sm tracking-widest">CONTACT</span>
+      <h2 class="font-heading font-black text-2xl md:text-4xl text-navy-800 mt-3">お問い合わせ・無料相談</h2>
+      <p class="text-navy-500 mt-4 text-sm md:text-base">まずはお気軽にご相談ください。24時間以内にご返信いたします。</p>
+    </div>
+
+    <div class="grid md:grid-cols-5 gap-8 items-start">
+      <!-- フォーム -->
+      <form action="https://formsubmit.co/web.craft.studio.japan@gmail.com" method="POST" class="md:col-span-3 bg-white rounded-2xl border border-navy-100 shadow-lg p-6 md:p-8 space-y-5">
+        <input type="hidden" name="_subject" value="【Web Craft Studio】ホームページよりお問い合わせ">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+        <div>
+          <label class="block text-sm font-heading font-bold text-navy-700 mb-2">お名前 <span class="text-red-500">*</span></label>
+          <input type="text" name="お名前" required placeholder="山田 太郎" class="w-full border border-navy-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-gold-500 focus:border-transparent">
+        </div>
+        <div>
+          <label class="block text-sm font-heading font-bold text-navy-700 mb-2">店名 <span class="text-red-500">*</span></label>
+          <input type="text" name="店名" required placeholder="例）居酒屋 花膳" class="w-full border border-navy-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-gold-500 focus:border-transparent">
+        </div>
+        <div>
+          <label class="block text-sm font-heading font-bold text-navy-700 mb-2">メールアドレス <span class="text-red-500">*</span></label>
+          <input type="email" name="メールアドレス" required placeholder="example@mail.com" class="w-full border border-navy-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-gold-500 focus:border-transparent">
+        </div>
+        <div>
+          <label class="block text-sm font-heading font-bold text-navy-700 mb-2">ご相談内容</label>
+          <textarea name="ご相談内容" rows="4" placeholder="現在のご状況やご要望などをご記入ください" class="w-full border border-navy-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-gold-500 focus:border-transparent"></textarea>
+        </div>
+        <button type="submit" class="w-full gold-gradient text-navy-800 font-heading font-bold text-base py-4 rounded-full shadow-lg hover:brightness-105 transition-all">
+          <i class="fa-solid fa-paper-plane mr-2"></i>この内容で相談する
+        </button>
+      </form>
+
+      <!-- 補足案内 -->
+      <div class="md:col-span-2 space-y-6">
+        <div class="bg-navy-50 rounded-2xl p-8 border border-navy-100">
+          <h3 class="font-heading font-bold text-navy-800 flex items-center gap-2"><i class="fa-solid fa-circle-info text-gold-600"></i>ご相談は無料です</h3>
+          <p class="text-navy-500 text-sm mt-3 leading-relaxed">ヒアリング・お見積りまで費用は一切かかりません。まずはお気軽にお問い合わせください。</p>
+        </div>
+        <div class="bg-navy-50 rounded-2xl p-8 border border-navy-100">
+          <h3 class="font-heading font-bold text-navy-800 flex items-center gap-2"><i class="fa-solid fa-envelope text-gold-600"></i>ご返信について</h3>
+          <p class="text-navy-500 text-sm mt-3 leading-relaxed">フォーム送信後、24時間以内にご入力いただいたメールアドレス宛にご返信いたします。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- フッター -->
+<footer class="bg-navy-900 text-navy-300 pt-16 pb-8 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-6xl mx-auto">
+    <div class="flex flex-col md:flex-row justify-between gap-10 pb-10 border-b border-navy-700">
+      <div class="max-w-sm">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="font-heading font-black text-lg text-white">Web Craft Studio</span>
+        </div>
+        <p class="text-sm leading-relaxed text-navy-400">飲食店様に特化した、高品質・高コスパなWeb制作サービス。既存の予約導線を活かした、集客につながるホームページをご提供します。</p>
+      </div>
+      <div class="grid grid-cols-2 gap-8 text-sm">
+        <div>
+          <h4 class="font-heading font-bold text-white mb-4">メニュー</h4>
+          <ul class="space-y-3 text-navy-400">
+            <li><a href="#reasons" class="hover:text-gold-400 transition-colors">選ばれる理由</a></li>
+            <li><a href="#pricing" class="hover:text-gold-400 transition-colors">サービス・料金</a></li>
+            <li><a href="#flow" class="hover:text-gold-400 transition-colors">制作の流れ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-heading font-bold text-white mb-4">サポート</h4>
+          <ul class="space-y-3 text-navy-400">
+            <li><a href="#contact" class="hover:text-gold-400 transition-colors">お問い合わせ</a></li>
+            <li><a href="#" class="hover:text-gold-400 transition-colors">プライバシーポリシー</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <p class="text-center text-xs text-navy-500 pt-8">© 2026 Web Craft Studio All Rights Reserved.</p>
+  </div>
+</footer>
+
+<!-- ページトップへ -->
+<a href="#top" class="fixed bottom-6 right-6 w-11 h-11 rounded-full bg-navy-800 hover:bg-navy-700 text-gold-400 flex items-center justify-center shadow-lg transition-colors z-40">
+  <i class="fa-solid fa-arrow-up"></i>
+</a>
+
+<script>
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+    const icon = menuBtn.querySelector('i');
+    icon.classList.toggle('fa-bars');
+    icon.classList.toggle('fa-xmark');
+  });
+  document.querySelectorAll('#mobileMenu a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+      const icon = menuBtn.querySelector('i');
+      icon.classList.add('fa-bars');
+      icon.classList.remove('fa-xmark');
+    });
+  });
+</script>
+
+</body>
+</html>

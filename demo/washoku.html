@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>和食 花膳（デモサイト）| Web Craft Studio 制作実績</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          navy: { 50:'#eef1f6',100:'#d3dae7',200:'#a7b6cf',400:'#4f6d9f',500:'#2e4d7d',700:'#13294a',800:'#0c1c35',900:'#081527' },
+          gold: { 400:'#e8c977',500:'#d4af37',600:'#b8942c' }
+        },
+      }
+    }
+  }
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Zen+Kaku+Gothic+New:wght@500;700;900&display=swap" rel="stylesheet">
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Noto Sans JP', sans-serif; }
+  .font-heading { font-family: 'Zen Kaku Gothic New', 'Noto Sans JP', sans-serif; }
+  .gold-gradient { background: linear-gradient(135deg, #e8c977 0%, #d4af37 50%, #b8942c 100%); }
+  .hero-bg { background: radial-gradient(ellipse at top right, rgba(212,175,55,0.15), transparent 50%), linear-gradient(135deg, #081527 0%, #0c1c35 40%, #13294a 100%); }
+</style>
+</head>
+<body class="bg-white text-navy-800 antialiased">
+
+<!-- デモ告知バナー -->
+<div class="bg-gold-500 text-navy-900 text-xs md:text-sm font-bold text-center py-2 px-4">
+  <i class="fa-solid fa-circle-info mr-1"></i>
+  これは Web Craft Studio の制作イメージを示す<span class="underline">デモサイト</span>です。
+  <a href="../index.html#works" class="underline hover:opacity-70 ml-1">← 制作実績一覧に戻る</a>
+</div>
+
+<!-- ヘッダー -->
+<header class="sticky top-0 bg-white/95 backdrop-blur-sm z-40 border-b border-navy-100 shadow-sm">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+    <a href="#top" class="font-heading font-black text-lg text-navy-800">和食 <span class="text-gold-600">花膳</span></a>
+    <nav class="hidden md:flex items-center gap-6 text-sm font-heading font-medium text-navy-600">
+      <a href="#about" class="hover:text-gold-600">お店について</a>
+      <a href="#menu" class="hover:text-gold-600">メニュー</a>
+      <a href="#access" class="hover:text-gold-600">アクセス</a>
+    </nav>
+    <a href="tel:0312345678" class="inline-flex items-center gap-2 bg-navy-800 text-white text-sm font-bold px-4 py-2 rounded-full">
+      <i class="fa-solid fa-phone"></i><span class="hidden sm:inline">03-1234-5678</span>
+    </a>
+  </div>
+</header>
+
+<!-- ヒーロー -->
+<section id="top" class="hero-bg py-20 md:py-28 px-4 text-center relative overflow-hidden">
+  <div class="absolute inset-0 opacity-[0.05]" style="background-image: radial-gradient(circle, #ffffff 1px, transparent 1px); background-size: 22px 22px;"></div>
+  <div class="relative max-w-3xl mx-auto">
+    <span class="inline-block text-gold-400 text-xs font-bold tracking-widest mb-3">JAPANESE RESTAURANT</span>
+    <h1 class="font-heading font-black text-3xl md:text-5xl text-white leading-tight">旬の食材と丁寧な仕事で<br class="hidden sm:block">おもてなしする、和食 花膳</h1>
+    <p class="mt-6 text-navy-200 text-sm md:text-base leading-relaxed">個室完備・接待や会食にも。四季折々の会席料理をご堪能ください。</p>
+    <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+      <a href="tel:0312345678" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 gold-gradient text-navy-800 font-bold px-7 py-3.5 rounded-full shadow-lg">
+        <i class="fa-solid fa-phone"></i> 電話で予約する
+      </a>
+      <a href="#" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white/10 border border-white/30 text-white font-bold px-7 py-3.5 rounded-full">
+        <i class="fa-solid fa-bowl-rice"></i> 食べログで予約する
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- お店について -->
+<section id="about" class="py-16 md:py-24 px-4 bg-navy-50/50">
+  <div class="max-w-4xl mx-auto grid md:grid-cols-3 gap-6 text-center">
+    <div class="bg-white rounded-2xl p-8 shadow-sm border border-navy-100">
+      <i class="fa-solid fa-leaf text-gold-600 text-2xl mb-3"></i>
+      <h3 class="font-heading font-bold text-navy-800">旬の食材</h3>
+      <p class="mt-2 text-sm text-navy-500 leading-relaxed">市場直送の旬魚と地野菜を使った季節の会席。</p>
+    </div>
+    <div class="bg-white rounded-2xl p-8 shadow-sm border border-navy-100">
+      <i class="fa-solid fa-door-closed text-gold-600 text-2xl mb-3"></i>
+      <h3 class="font-heading font-bold text-navy-800">個室完備</h3>
+      <p class="mt-2 text-sm text-navy-500 leading-relaxed">2名〜20名までの個室をご用意。接待・会食に最適。</p>
+    </div>
+    <div class="bg-white rounded-2xl p-8 shadow-sm border border-navy-100">
+      <i class="fa-solid fa-phone-volume text-gold-600 text-2xl mb-3"></i>
+      <h3 class="font-heading font-bold text-navy-800">ご予約はお電話・食べログで</h3>
+      <p class="mt-2 text-sm text-navy-500 leading-relaxed">お電話または食べログの予約ページからお気軽にどうぞ。</p>
+    </div>
+  </div>
+</section>
+
+<!-- メニュー -->
+<section id="menu" class="py-16 md:py-24 px-4">
+  <div class="max-w-3xl mx-auto">
+    <div class="text-center mb-12">
+      <span class="text-gold-600 font-bold text-xs tracking-widest">MENU</span>
+      <h2 class="font-heading font-black text-2xl md:text-3xl text-navy-800 mt-2">お品書き</h2>
+    </div>
+    <div class="space-y-4">
+      <div class="flex justify-between items-center border-b border-navy-100 pb-4">
+        <div><p class="font-heading font-bold text-navy-800">季節の会席コース</p><p class="text-xs text-navy-400 mt-1">先付・お造り・煮物・焼物・食事・甘味</p></div>
+        <p class="font-heading font-bold text-gold-600">¥8,800〜</p>
+      </div>
+      <div class="flex justify-between items-center border-b border-navy-100 pb-4">
+        <div><p class="font-heading font-bold text-navy-800">特上握り寿司御膳</p><p class="text-xs text-navy-400 mt-1">旬の魚介を使った握り10貫＋汁物</p></div>
+        <p class="font-heading font-bold text-gold-600">¥3,500</p>
+      </div>
+      <div class="flex justify-between items-center border-b border-navy-100 pb-4">
+        <div><p class="font-heading font-bold text-navy-800">天ぷら定食</p><p class="text-xs text-navy-400 mt-1">旬野菜と海老の天ぷら盛り合わせ</p></div>
+        <p class="font-heading font-bold text-gold-600">¥2,200</p>
+      </div>
+      <div class="flex justify-between items-center pb-4">
+        <div><p class="font-heading font-bold text-navy-800">昼限定 花膳ランチ</p><p class="text-xs text-navy-400 mt-1">日替わり小鉢付き（数量限定）</p></div>
+        <p class="font-heading font-bold text-gold-600">¥1,500</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- アクセス -->
+<section id="access" class="py-16 md:py-24 px-4 bg-navy-800">
+  <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 items-center">
+    <div class="text-white">
+      <span class="text-gold-400 font-bold text-xs tracking-widest">ACCESS</span>
+      <h2 class="font-heading font-black text-2xl md:text-3xl mt-2">アクセス・営業時間</h2>
+      <ul class="mt-6 space-y-3 text-sm text-navy-200">
+        <li class="flex gap-3"><i class="fa-solid fa-location-dot text-gold-400 mt-1"></i>東京都渋谷区〇〇 1-2-3 花膳ビル1F</li>
+        <li class="flex gap-3"><i class="fa-solid fa-train text-gold-400 mt-1"></i>〇〇駅より徒歩5分</li>
+        <li class="flex gap-3"><i class="fa-solid fa-clock text-gold-400 mt-1"></i>11:30-14:00 / 17:00-23:00（月曜定休）</li>
+        <li class="flex gap-3"><i class="fa-solid fa-phone text-gold-400 mt-1"></i>03-1234-5678</li>
+      </ul>
+      <a href="tel:0312345678" class="mt-8 inline-flex items-center gap-2 gold-gradient text-navy-800 font-bold px-6 py-3 rounded-full">
+        <i class="fa-solid fa-phone"></i> 今すぐ電話する
+      </a>
+    </div>
+    <div class="rounded-2xl overflow-hidden shadow-lg h-64 md:h-80">
+      <iframe class="w-full h-full border-0" loading="lazy" src="https://www.google.com/maps?q=渋谷駅&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-navy-900 text-navy-400 text-center text-xs py-8 px-4">
+  <p>© 2026 和食 花膳（デモサイト）— Produced by <a href="../index.html" class="text-gold-400 hover:underline">Web Craft Studio</a></p>
+</footer>
+
+</body>
+</html>
